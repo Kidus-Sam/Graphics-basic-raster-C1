@@ -17,7 +17,8 @@ class Raster{
         void clear(Color pFillColor);
         void writeToPPM();
         void drawLine_DDA(float x1, float y1, float x2, float y2, Color pFillColor);
-        void swap(float& x1, float& y1, float& x2, float& y2);
+        void swap(float& x1, float& y1, float& x2, float& y2, float m);
+        void check(float& x1, float& y1, float& x2, float& y2, float m);
 
 
 };
