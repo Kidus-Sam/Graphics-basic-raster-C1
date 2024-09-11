@@ -213,6 +213,15 @@ void Raster::check(float& x1, float& y1, float& x2, float& y2, float m){
             x1=width-1;
             std::cout<<"y1 is greater than height and x1 is greater than width"<<std::endl;
         }
-
+        if(x1<0&&y1>=height&&yIntercept<height){
+            x1=0;
+            y1= yIntercept;
+            std::cout<<"x1 is less than 0 and y1 is greater than height"<<std::endl;
+        }
+        if(x1<0&&y1>=height&&yIntercept>height){
+            x1= (height-yIntercept)/m;
+            y1=height;
+            std::cout<<"x1 is less than 0 and y1 is greater than height"<<std::endl;
+        }
     }
 }
